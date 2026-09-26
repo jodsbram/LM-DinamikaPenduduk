@@ -3343,10 +3343,1762 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffcf33;outline-offse
   }
 }
 
+
+/* =========================================================
+   v20 — DESKTOP LEBIH PENUH + MOBILE MEMPERTAHANKAN LAYOUT DESKTOP
+========================================================= */
+
+/* ---------- DESKTOP / LAPTOP ---------- */
+@media (min-width:981px){
+
+  /* Kanvas memanfaatkan viewport lebih maksimal */
+  #app{
+    width:min(98vw,calc(96vh * 16 / 9)) !important;
+    height:min(96vh,calc(98vw * 9 / 16)) !important;
+  }
+
+  .shell{
+    padding:2.25% 3.8% 2.7% !important;
+  }
+
+  .heading{
+    width:min(1180px,92%) !important;
+    margin-bottom:.65% !important;
+  }
+
+  .kicker{
+    font-size:clamp(11px,.82vw,14px) !important;
+  }
+
+  .heading h2{
+    font-size:clamp(27px,2.35vw,40px) !important;
+    line-height:1.06 !important;
+  }
+
+  .heading p{
+    max-width:1040px !important;
+    font-size:clamp(14px,1.03vw,18px) !important;
+    line-height:1.38 !important;
+  }
+
+  .nav-row{
+    left:3.8% !important;
+    right:3.8% !important;
+    bottom:2.35% !important;
+  }
+
+  .nav-btn{
+    min-width:150px !important;
+    min-height:48px !important;
+    font-size:clamp(13px,.98vw,16px) !important;
+  }
+
+  /* Pilih aktivitas */
+  .activity-screen .heading{
+    margin-top:2.4% !important;
+  }
+
+  .activity-grid{
+    width:88% !important;
+    top:54.5% !important;
+    gap:1.6% !important;
+  }
+
+  .activity-card{
+    height:clamp(300px,42vh,410px) !important;
+    max-height:54vh !important;
+    padding:5.5% 6% 5% !important;
+  }
+
+  .activity-card .icon{
+    width:clamp(82px,6.7vw,112px) !important;
+    height:clamp(82px,6.7vw,112px) !important;
+    margin-bottom:5.5% !important;
+  }
+
+  .activity-card h3{
+    font-size:clamp(25px,2.05vw,35px) !important;
+  }
+
+  .activity-card p{
+    padding:.72em 1em !important;
+    font-size:clamp(11px,.87vw,15px) !important;
+    line-height:1.3 !important;
+  }
+
+  .activity-footer-tools{
+    bottom:1.8% !important;
+    width:min(820px,72%) !important;
+  }
+
+  .activity-footer-tools button{
+    min-height:42px !important;
+    font-size:clamp(11px,.78vw,13px) !important;
+  }
+
+  /* Materi: kartu diperlebar, font diperbesar */
+  .material-slide-layout{
+    width:min(1280px,94%) !important;
+    height:72% !important;
+    margin:.55% auto 0 !important;
+    grid-template-columns:1.03fr .97fr !important;
+    gap:1.5% !important;
+  }
+
+  .material-copy-card,
+  .material-visual-card{
+    padding:2.5% !important;
+  }
+
+  .material-copy-card h3{
+    font-size:clamp(23px,1.75vw,31px) !important;
+    margin-bottom:12px !important;
+  }
+
+  .material-copy-card p{
+    font-size:clamp(13px,.99vw,17px) !important;
+    line-height:1.52 !important;
+  }
+
+  .material-bullet li{
+    font-size:clamp(12px,.92vw,16px) !important;
+    line-height:1.42 !important;
+  }
+
+  .material-question-box,
+  .material-example-simple,
+  .material-link-student{
+    font-size:clamp(11px,.84vw,14px) !important;
+    line-height:1.4 !important;
+  }
+
+  .material-image-frame{
+    max-width:580px !important;
+  }
+
+  .material-image-note{
+    max-width:580px !important;
+    font-size:clamp(10px,.73vw,12px) !important;
+  }
+
+  #materi10 .material-slide-layout.material-slide-full{
+    width:min(1180px,89%) !important;
+    height:67% !important;
+    margin:.8% auto 0 !important;
+  }
+
+  #materi10 .material-copy-full{
+    padding:4% 5% !important;
+  }
+
+  #materi10 .material-copy-full p{
+    font-size:clamp(13px,1vw,17px) !important;
+  }
+
+  /* Materi naratif lama bila masih digunakan */
+  .story-grid,
+  .material-grid{
+    width:min(1280px,94%) !important;
+    height:72% !important;
+    margin:.55% auto 0 !important;
+  }
+
+  /* Info awal */
+  .pre-lab-grid{
+    width:min(1160px,88%) !important;
+    height:60% !important;
+    margin:1.2% auto 0 !important;
+    gap:1.8% !important;
+  }
+
+  .pre-lab-card{
+    padding:4.5% !important;
+  }
+
+  .pre-lab-card h3{
+    font-size:clamp(24px,1.8vw,31px) !important;
+  }
+
+  .pre-lab-card p{
+    font-size:clamp(12px,.92vw,16px) !important;
+  }
+
+  /* Video pengantar */
+  .apersepsi-heading{
+    width:min(1100px,88%) !important;
+  }
+
+  .video-card{
+    width:min(1120px,86%) !important;
+  }
+
+  .ap-actions{
+    width:min(1120px,86%) !important;
+  }
+
+  /* Latihan */
+  #practiceScreen .practice-wrap,
+  .practice-wrap{
+    width:min(1180px,90%) !important;
+    height:75% !important;
+    margin:.3% auto 0 !important;
+    grid-template-columns:.28fr .72fr !important;
+    gap:1.3% !important;
+  }
+
+  #practiceScreen .practice-question{
+    font-size:clamp(18px,1.42vw,25px) !important;
+  }
+
+  #practiceScreen .option-btn{
+    font-size:clamp(12px,.88vw,15px) !important;
+  }
+
+  /* Hasil latihan */
+  #practiceResult .result-panel-new{
+    width:min(1180px,90%) !important;
+    height:80% !important;
+    margin:6.3% auto 0 !important;
+    grid-template-columns:.36fr .64fr !important;
+  }
+
+  /* Menu lab */
+  .lab-menu-grid{
+    width:min(1240px,92%) !important;
+    margin:1.5% auto 0 !important;
+    gap:1.15% !important;
+  }
+
+  .lab-card{
+    min-height:clamp(270px,33vh,350px) !important;
+    padding:6% !important;
+  }
+
+  .lab-card h3{
+    font-size:clamp(20px,1.45vw,25px) !important;
+  }
+
+  .lab-card p{
+    font-size:clamp(11px,.82vw,14px) !important;
+  }
+
+  /* Pengantar dan eksperimen lab */
+  .lab-concept-grid,
+  .lab-intro-grid{
+    width:min(1260px,93%) !important;
+    height:70% !important;
+    margin:.45% auto 0 !important;
+    gap:1.35% !important;
+  }
+
+  .lab-exp-layout,
+  .sim-grid{
+    width:min(1260px,93%) !important;
+    height:71% !important;
+    margin:.45% auto 0 !important;
+    gap:1.35% !important;
+  }
+
+  .lab-concept-card,
+  .lab-intro-card,
+  .lab-exp-card{
+    padding:2.15% !important;
+  }
+
+  .lab-concept-card h3,
+  .lab-intro-card h3,
+  .lab-exp-card h3{
+    font-size:clamp(19px,1.45vw,26px) !important;
+  }
+
+  .lab-concept-card p,
+  .lab-intro-card p,
+  .lab-intro-card li{
+    font-size:clamp(11px,.86vw,15px) !important;
+  }
+
+  /* Hasil visual lab */
+  .lab-image-wrap{
+    width:min(720px,66%) !important;
+    max-width:720px !important;
+  }
+
+  .observe-banner{
+    width:min(940px,80%) !important;
+    font-size:clamp(15px,1.22vw,20px) !important;
+  }
+
+  /* Refleksi */
+  .reflection-grid{
+    width:min(1220px,92%) !important;
+    height:67% !important;
+    margin:.7% auto 0 !important;
+    gap:1.2% !important;
+  }
+
+  .reflection-card{
+    padding:2.2% !important;
+  }
+
+  .reflection-card label{
+    font-size:clamp(13px,.96vw,16px) !important;
+  }
+
+  .reflection-card textarea{
+    font-size:clamp(12px,.9vw,15px) !important;
+  }
+}
+
+/* =========================================================
+   MOBILE / TABLET KECIL
+   Layout TIDAK diubah menjadi satu kolom.
+   Canvas desktop dipertahankan; perangkat boleh scroll.
+========================================================= */
+@media (max-width:980px){
+
+  html,body{
+    margin:0 !important;
+    width:auto !important;
+    min-width:100% !important;
+    height:auto !important;
+    min-height:100% !important;
+    overflow:auto !important;
+    background:#102b3d !important;
+  }
+
+  #rotateWarning{
+    display:none !important;
+  }
+
+  /*
+     Potret: canvas desktop mini 900×506.
+     Pengguna dapat menggeser horizontal/vertikal tanpa layout berubah.
+  */
+  #app{
+    position:relative !important;
+    left:0 !important;
+    top:0 !important;
+    transform:none !important;
+    width:max(900px,100vw) !important;
+    height:max(506px,56.25vw) !important;
+    min-width:900px !important;
+    min-height:506px !important;
+    aspect-ratio:16/9 !important;
+    overflow:hidden !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+
+  .screen{
+    position:absolute !important;
+    inset:0 !important;
+    display:none;
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+  }
+
+  .screen.active{
+    display:block !important;
+  }
+
+  .shell{
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    padding:2.25% 3.8% 2.7% !important;
+  }
+
+  .home-btn{
+    position:absolute !important;
+    left:2.4% !important;
+    top:3.1% !important;
+    width:48px !important;
+    height:48px !important;
+    font-size:20px !important;
+    border-width:3px !important;
+  }
+
+  .heading{
+    width:92% !important;
+    margin:0 auto .65% !important;
+    padding:0 !important;
+  }
+
+  .kicker{
+    font-size:10px !important;
+  }
+
+  .heading h2{
+    font-size:27px !important;
+    line-height:1.06 !important;
+  }
+
+  .heading p{
+    max-width:1040px !important;
+    font-size:13px !important;
+    line-height:1.35 !important;
+  }
+
+  .nav-row{
+    position:absolute !important;
+    left:3.8% !important;
+    right:3.8% !important;
+    bottom:2.35% !important;
+    margin:0 !important;
+    padding:0 !important;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+  }
+
+  .nav-btn{
+    flex:none !important;
+    min-width:140px !important;
+    min-height:43px !important;
+    font-size:12px !important;
+  }
+
+  /* Cover: sama dengan desktop, tombol tidak membesar memenuhi layar */
+  .cover-screen{
+    min-height:0 !important;
+  }
+
+  .cover-content{
+    position:absolute !important;
+    inset:0 !important;
+    padding:8% 15% 12% !important;
+  }
+
+  .cover-content h1{
+    font-size:48px !important;
+  }
+
+  .cover-content p{
+    font-size:15px !important;
+  }
+
+  .start-button{
+    width:auto !important;
+    min-width:240px !important;
+    max-width:none !important;
+    min-height:48px !important;
+    padding:0 28px !important;
+    bottom:4% !important;
+    font-size:16px !important;
+  }
+
+  .top-logo{
+    width:58px !important;
+    height:58px !important;
+  }
+
+  /* Info awal: tetap dua kartu kanan-kiri */
+  .pre-lab-screen{
+    padding:0 !important;
+    min-height:0 !important;
+  }
+
+  .pre-lab-grid{
+    width:88% !important;
+    height:60% !important;
+    margin:1.2% auto 0 !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:1.8% !important;
+  }
+
+  .pre-lab-card{
+    min-height:0 !important;
+    padding:4.5% !important;
+  }
+
+  .pre-lab-start{
+    width:auto !important;
+    max-width:none !important;
+    margin:1.5% auto 0 !important;
+  }
+
+  /* Video: komposisi desktop */
+  .apersepsi-shell{
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    padding:2.2% 4.5% 3.3% !important;
+  }
+
+  .apersepsi-heading{
+    width:88% !important;
+    margin:0 auto 1% !important;
+    padding:1% 2.3% !important;
+  }
+
+  .apersepsi-heading h2{
+    font-size:29px !important;
+  }
+
+  .video-card{
+    width:86% !important;
+    flex:1 !important;
+    min-height:0 !important;
+    aspect-ratio:16/9 !important;
+  }
+
+  .ap-actions{
+    width:86% !important;
+    margin:1% auto 0 !important;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+  }
+
+  /* Menu aktivitas: tiga kartu tetap sejajar */
+  .activity-screen{
+    min-height:0 !important;
+    padding:0 !important;
+  }
+
+  .activity-screen .heading{
+    margin-top:2.4% !important;
+  }
+
+  .activity-grid{
+    position:absolute !important;
+    left:50% !important;
+    top:54.5% !important;
+    transform:translate(-50%,-50%) !important;
+    width:88% !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:1.6% !important;
+  }
+
+  .activity-card{
+    height:330px !important;
+    min-height:0 !important;
+    max-height:54% !important;
+    padding:5.5% 6% 5% !important;
+  }
+
+  .activity-card .icon{
+    width:82px !important;
+    height:82px !important;
+    margin-bottom:5.5% !important;
+  }
+
+  .activity-card h3{
+    font-size:25px !important;
+  }
+
+  .activity-card p{
+    font-size:11px !important;
+  }
+
+  .activity-footer-tools{
+    position:absolute !important;
+    left:50% !important;
+    bottom:1.8% !important;
+    transform:translateX(-50%) !important;
+    width:72% !important;
+    margin:0 !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:10px !important;
+  }
+
+  .activity-footer-tools button{
+    min-height:38px !important;
+    font-size:10px !important;
+  }
+
+  .reset-progress-btn{
+    position:absolute !important;
+    right:2.6% !important;
+    top:3.2% !important;
+    width:auto !important;
+    min-height:36px !important;
+    margin:0 !important;
+    font-size:10px !important;
+  }
+
+  /* Materi tetap dua kolom */
+  .material-slide-layout{
+    width:94% !important;
+    height:72% !important;
+    margin:.55% auto 0 !important;
+    grid-template-columns:1.03fr .97fr !important;
+    gap:1.5% !important;
+  }
+
+  .story-grid,
+  .material-grid{
+    width:94% !important;
+    height:72% !important;
+    margin:.55% auto 0 !important;
+    grid-template-columns:1.05fr .95fr !important;
+    gap:1.5% !important;
+  }
+
+  .material-copy-card,
+  .material-visual-card,
+  .story-card,
+  .material-copy,
+  .material-side{
+    height:100% !important;
+    min-height:0 !important;
+    padding:2.5% !important;
+    overflow:hidden !important;
+  }
+
+  .material-copy-card h3{
+    font-size:22px !important;
+  }
+
+  .material-copy-card p{
+    font-size:12px !important;
+    line-height:1.45 !important;
+  }
+
+  .material-bullet li{
+    font-size:11px !important;
+  }
+
+  .material-image-frame{
+    max-width:520px !important;
+  }
+
+  #materi10 .material-slide-layout.material-slide-full{
+    width:89% !important;
+    height:67% !important;
+    margin:.8% auto 0 !important;
+    display:block !important;
+  }
+
+  #materi10 .material-copy-full{
+    width:100% !important;
+    height:100% !important;
+    padding:4% 5% !important;
+  }
+
+  /* Latihan: panel kiri-kanan tetap dipertahankan */
+  #practiceScreen .shell{
+    padding:2.25% 3.8% 2.7% !important;
+  }
+
+  #practiceScreen .practice-wrap,
+  .practice-wrap{
+    width:90% !important;
+    height:75% !important;
+    margin:.3% auto 0 !important;
+    grid-template-columns:.28fr .72fr !important;
+    gap:1.3% !important;
+  }
+
+  #practiceScreen .practice-info,
+  #practiceScreen .practice-box,
+  .practice-info,
+  .practice-box{
+    height:100% !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+  }
+
+  #practiceScreen .practice-box,
+  #practiceScreen .practice-box.match-mode{
+    display:grid !important;
+    padding:1.8% 2.2% !important;
+  }
+
+  #practiceScreen .practice-box:not(.match-mode) .options,
+  .options{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  #practiceScreen .practice-next,
+  #practiceScreen .practice-box.match-mode .practice-next{
+    width:auto !important;
+    position:static !important;
+    align-self:end !important;
+  }
+
+  #practiceScreen .matching-host{
+    overflow:hidden !important;
+  }
+
+  #practiceScreen .matching-board{
+    height:100% !important;
+    min-height:0 !important;
+    column-gap:18% !important;
+  }
+
+  /* Hasil latihan tetap dua kolom */
+  #practiceResult{
+    padding:0 !important;
+  }
+
+  #practiceResult .result-panel-new{
+    width:90% !important;
+    height:80% !important;
+    margin:6.3% auto 0 !important;
+    padding:2% !important;
+    grid-template-columns:.36fr .64fr !important;
+    gap:1.5% !important;
+    overflow:hidden !important;
+  }
+
+  .result-review,
+  .review-content,
+  .review-card{
+    overflow:hidden !important;
+  }
+
+  /* Menu lab tetap 4 kolom */
+  .lab-menu-grid{
+    width:92% !important;
+    margin:1.5% auto 0 !important;
+    grid-template-columns:repeat(4,1fr) !important;
+    gap:1.15% !important;
+  }
+
+  .lab-card{
+    min-height:280px !important;
+    padding:6% !important;
+  }
+
+  /* Pengantar / eksperimen tetap kanan-kiri */
+  .lab-concept-grid,
+  .lab-intro-grid{
+    width:93% !important;
+    height:70% !important;
+    margin:.45% auto 0 !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:1.35% !important;
+  }
+
+  .lab-exp-layout,
+  .sim-grid{
+    width:93% !important;
+    height:71% !important;
+    margin:.45% auto 0 !important;
+    grid-template-columns:1.08fr .92fr !important;
+    gap:1.35% !important;
+  }
+
+  .lab-concept-card,
+  .lab-exp-card,
+  .lab-intro-card,
+  .control-card,
+  .visual-card{
+    height:100% !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+    padding:2.15% !important;
+  }
+
+  #introGrowth .lab-concept-grid{
+    height:70% !important;
+  }
+
+  #introGrowth .lab-concept-card p{
+    font-size:10px !important;
+    line-height:1.3 !important;
+  }
+
+  #introGrowth .capacity-step{
+    font-size:8px !important;
+    line-height:1.2 !important;
+  }
+
+  .lab-slider-list,
+  .sliders{
+    overflow:hidden !important;
+    flex:1 !important;
+  }
+
+  .lab-slider-row,
+  .slider-row{
+    padding:5px 7px !important;
+  }
+
+  .lab-answer-empty{
+    min-height:0 !important;
+  }
+
+  #growthAnswer .lab-answer-lines{
+    grid-template-columns:1fr 1fr !important;
+    grid-template-rows:1fr 1fr !important;
+  }
+
+  .lab-exp-actions{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  /* Visual hasil lab tetap seperti desktop */
+  .lab-visual-shell{
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    padding:2.5% 4.5% 3% !important;
+    display:grid !important;
+    grid-template-rows:auto 1fr auto !important;
+  }
+
+  .observe-banner{
+    width:80% !important;
+    min-height:44px !important;
+    margin:0 !important;
+    border-radius:999px !important;
+  }
+
+  .lab-image-wrap{
+    width:66% !important;
+    max-width:660px !important;
+    max-height:56% !important;
+    margin:0 !important;
+  }
+
+  .lab-visual-actions{
+    width:auto !important;
+    margin:0 !important;
+    display:flex !important;
+    grid-template-columns:none !important;
+  }
+
+  .lab-visual-btn{
+    width:auto !important;
+    min-width:150px !important;
+    min-height:40px !important;
+  }
+
+  /* Refleksi tetap dua kolom */
+  .reflection-grid{
+    width:92% !important;
+    height:67% !important;
+    margin:.7% auto 0 !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:1.2% !important;
+  }
+
+  .reflection-card{
+    min-height:0 !important;
+    padding:2.2% !important;
+  }
+
+  /* Popup boleh scroll; ini satu-satunya area yang sengaja bebas scroll */
+  .modal,
+  .lab-explain-modal{
+    position:absolute !important;
+    inset:0 !important;
+    padding:1.5% !important;
+    overflow:auto !important;
+    align-items:center !important;
+  }
+
+  .modal-box,
+  .resource-modal-box,
+  .lab-explain-box{
+    width:min(900px,88%) !important;
+    max-width:900px !important;
+    min-height:0 !important;
+    max-height:88% !important;
+    margin:auto !important;
+    padding:2.5% 3% !important;
+    overflow:auto !important;
+    border-radius:22px !important;
+  }
+
+  .glossary-list{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .glossary-item{
+    grid-template-columns:140px 1fr !important;
+  }
+
+  /* Profil tetap satu halaman; tim di atas, 2 pengembang di bawah */
+  .developer-one-page{
+    width:min(1000px,92%) !important;
+    max-width:1000px !important;
+    max-height:90% !important;
+    overflow:auto !important;
+    padding:2.3% 2.7% !important;
+  }
+
+  .developer-team-compact{
+    grid-template-columns:1.25fr 1fr .8fr !important;
+    gap:8px !important;
+  }
+
+  .developer-two-column{
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+    margin-top:10px !important;
+  }
+
+  .developer-person-card{
+    grid-template-columns:70px 1fr !important;
+    gap:10px !important;
+    padding:10px !important;
+  }
+
+  .developer-small-photo{
+    width:62px !important;
+  }
+
+  .developer-person-copy h3{
+    font-size:17px !important;
+  }
+
+  .developer-role{
+    font-size:10px !important;
+  }
+
+  .developer-compact-data p{
+    font-size:9px !important;
+  }
+
+  .developer-about-media p{
+    font-size:9px !important;
+  }
+}
+
+/* Mobile landscape: sebisa mungkin memenuhi lebar perangkat tanpa mengubah layout */
+@media (max-width:980px) and (orientation:landscape){
+  #app{
+    width:max(760px,100vw) !important;
+    min-width:760px !important;
+    height:max(428px,56.25vw) !important;
+    min-height:428px !important;
+  }
+
+  .start-button{
+    min-width:230px !important;
+    min-height:46px !important;
+    font-size:15px !important;
+  }
+}
+
+
+/* =========================================================
+   v21 — STABILISASI LAYOUT, MOBILE 16:9 TANPA SCROLL HORIZONTAL
+========================================================= */
+
+/* ---------- PERBAIKAN GLOBAL MENU DESKTOP ---------- */
+@media (min-width:981px){
+  html,body{
+    overflow:hidden !important;
+  }
+
+  #app{
+    overflow:hidden !important;
+  }
+
+  .activity-grid{
+    top:53.5% !important;
+    width:88% !important;
+  }
+
+  .activity-card{
+    height:clamp(280px,43vh,390px) !important;
+    max-height:52vh !important;
+  }
+
+  .lab-menu-grid{
+    width:92% !important;
+    height:56% !important;
+    margin:1.1% auto 0 !important;
+    align-items:stretch !important;
+  }
+
+  .lab-card{
+    min-height:0 !important;
+    height:100% !important;
+    padding:6% !important;
+  }
+
+  .lab-menu-footer{
+    position:absolute;
+    left:50%;
+    bottom:2.5%;
+    transform:translateX(-50%);
+    width:min(820px,72%);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .lab-extra-btn{
+    min-height:54px;
+  }
+}
+
+/* ---------- LAB MENU EXTRA BUTTONS ---------- */
+.lab-menu-footer{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.lab-extra-btn{
+  border:0;
+  border-radius:16px;
+  padding:9px 14px;
+  background:#fff;
+  color:#244d62;
+  box-shadow:0 9px 22px rgba(0,60,90,.13);
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:10px;
+  align-items:center;
+  text-align:left;
+}
+
+.lab-extra-btn>span{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#eaf6fa;
+  font-size:20px;
+}
+
+.lab-extra-btn b{
+  display:block;
+  color:#0d63a0;
+  font-size:clamp(12px,.9vw,15px);
+}
+
+.lab-extra-btn small{
+  display:block;
+  margin-top:2px;
+  color:#617b89;
+  font-size:clamp(9px,.66vw,11px);
+  line-height:1.25;
+  font-weight:750;
+}
+
+.lab-extra-btn.locked,
+.lab-extra-btn:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+/* ---------- RANGKUMAN ---------- */
+.summary-modal-box{
+  width:min(1040px,88%) !important;
+  max-height:86% !important;
+}
+
+.summary-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.summary-card{
+  padding:13px 14px;
+  border-radius:14px;
+  background:#f5fafc;
+  border:1px solid #dcebf1;
+}
+
+.summary-card.wide{
+  grid-column:1/3;
+}
+
+.summary-card h3{
+  margin:0 0 6px;
+  color:#0d65a1;
+  font-size:clamp(14px,1.08vw,18px);
+}
+
+.summary-card p{
+  margin:0 !important;
+  color:#35596b;
+  font-size:clamp(10px,.78vw,13px) !important;
+  line-height:1.45 !important;
+  font-weight:720;
+}
+
+.summary-formula{
+  margin:6px 0;
+  padding:8px 10px;
+  border-radius:10px;
+  background:#0d5ea8;
+  color:white;
+  text-align:center;
+  font-size:clamp(11px,.82vw,14px);
+  font-weight:900;
+}
+
+/* ---------- PROFIL PENGEMBANG: DIJAGA HANYA DI DALAM MODAL ---------- */
+#developerModal{
+  display:none;
+}
+
+#developerModal.show{
+  display:flex !important;
+}
+
+#developerModal .developer-one-page{
+  width:min(1060px,90%) !important;
+  max-height:88% !important;
+  overflow:auto !important;
+}
+
+#developerModal .developer-team-compact{
+  margin-top:10px !important;
+}
+
+#developerModal .developer-two-column{
+  margin-top:12px !important;
+}
+
+#developerModal .developer-about-media{
+  margin-top:12px !important;
+}
+
+/* =========================================================
+   MOBILE PORTRAIT: MINTA LANDSCAPE
+========================================================= */
+@media (max-width:980px) and (orientation:portrait){
+  html,body{
+    overflow:hidden !important;
+  }
+
+  #rotateWarning{
+    display:flex !important;
+  }
+
+  #app{
+    display:none !important;
+  }
+}
+
+/* =========================================================
+   MOBILE LANDSCAPE
+   - lebar 100vw
+   - basis 16:9
+   - hanya vertical scroll
+   - tidak ada horizontal scroll
+========================================================= */
+@media (max-width:980px) and (orientation:landscape){
+
+  html,body{
+    width:100% !important;
+    min-width:0 !important;
+    height:auto !important;
+    min-height:100% !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+    background:#102b3d !important;
+  }
+
+  #rotateWarning{
+    display:none !important;
+  }
+
+  #app{
+    position:relative !important;
+    left:auto !important;
+    top:auto !important;
+    transform:none !important;
+    width:100vw !important;
+    min-width:0 !important;
+    height:auto !important;
+    min-height:56.25vw !important;
+    aspect-ratio:auto !important;
+    overflow:visible !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+
+  .screen{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    min-width:0 !important;
+    height:auto !important;
+    min-height:56.25vw !important;
+    overflow:visible !important;
+    display:none;
+  }
+
+  .screen.active{
+    display:block !important;
+  }
+
+  .shell{
+    width:100% !important;
+    height:auto !important;
+    min-height:56.25vw !important;
+    padding:2.2vw 3.4vw 2.6vw !important;
+    overflow:visible !important;
+  }
+
+  /* Semua elemen tidak boleh memaksa lebar keluar viewport */
+  .shell *,
+  .screen *,
+  .modal-box *{
+    max-width:100%;
+  }
+
+  .heading{
+    width:88% !important;
+    margin:0 auto 1vw !important;
+  }
+
+  .kicker{
+    font-size:clamp(8px,1.3vw,11px) !important;
+  }
+
+  .heading h2{
+    font-size:clamp(20px,3.5vw,31px) !important;
+    line-height:1.08 !important;
+  }
+
+  .heading p{
+    font-size:clamp(10px,1.7vw,14px) !important;
+    line-height:1.35 !important;
+  }
+
+  .home-btn{
+    position:absolute !important;
+    left:2.2vw !important;
+    top:2.2vw !important;
+    width:44px !important;
+    height:44px !important;
+    font-size:18px !important;
+  }
+
+  /* COVER: tetap 16:9, tombol proporsional */
+  .cover-screen{
+    min-height:56.25vw !important;
+    height:56.25vw !important;
+    overflow:hidden !important;
+  }
+
+  .cover-content{
+    position:absolute !important;
+    inset:0 !important;
+    padding:7% 14% 12% !important;
+  }
+
+  .cover-content h1{
+    font-size:clamp(34px,6vw,54px) !important;
+  }
+
+  .cover-content p{
+    font-size:clamp(11px,2vw,16px) !important;
+  }
+
+  .start-button{
+    position:absolute !important;
+    left:50% !important;
+    bottom:4% !important;
+    transform:translateX(-50%) !important;
+    width:auto !important;
+    min-width:220px !important;
+    max-width:340px !important;
+    min-height:46px !important;
+    padding:0 24px !important;
+    font-size:15px !important;
+  }
+
+  .top-logo{
+    width:52px !important;
+    height:52px !important;
+  }
+
+  /* NAVIGASI: berada setelah isi jika konten tinggi */
+  .nav-row{
+    position:static !important;
+    width:92% !important;
+    margin:1.4vw auto 0 !important;
+    padding:0 0 1.2vw !important;
+    display:flex !important;
+    justify-content:space-between !important;
+    gap:10px !important;
+  }
+
+  .nav-btn{
+    flex:0 0 auto !important;
+    min-width:130px !important;
+    min-height:42px !important;
+    font-size:11px !important;
+  }
+
+  /* INFO AWAL tetap kanan-kiri */
+  .pre-lab-grid{
+    width:90% !important;
+    height:auto !important;
+    min-height:31vw !important;
+    margin:1vw auto 0 !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:1.5vw !important;
+  }
+
+  .pre-lab-card{
+    min-height:30vw !important;
+    padding:4vw !important;
+  }
+
+  .pre-lab-icon{
+    font-size:clamp(38px,6vw,58px) !important;
+  }
+
+  .pre-lab-card h3{
+    font-size:clamp(18px,2.8vw,24px) !important;
+  }
+
+  .pre-lab-card p{
+    font-size:clamp(9px,1.55vw,12px) !important;
+  }
+
+  .pre-lab-start{
+    min-width:230px !important;
+    min-height:44px !important;
+    margin:1.2vw auto 0 !important;
+    font-size:13px !important;
+  }
+
+  /* VIDEO */
+  .apersepsi-shell{
+    height:auto !important;
+    min-height:56.25vw !important;
+    padding:2vw 4vw 2.5vw !important;
+  }
+
+  .apersepsi-heading{
+    width:88% !important;
+  }
+
+  .apersepsi-heading h2{
+    font-size:clamp(21px,3.7vw,30px) !important;
+  }
+
+  .video-card{
+    width:84% !important;
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:16/9 !important;
+    flex:none !important;
+  }
+
+  .ap-actions{
+    width:84% !important;
+    margin:1vw auto 0 !important;
+  }
+
+  /* MENU AKTIVITAS: 3 KARTU TETAP SEJAJAR, TIDAK ABSOLUTE */
+  .activity-screen{
+    padding:0 !important;
+  }
+
+  .activity-screen .heading{
+    margin-top:2.3vw !important;
+  }
+
+  .activity-grid{
+    position:static !important;
+    transform:none !important;
+    width:88% !important;
+    margin:2vw auto 0 !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:1.5vw !important;
+  }
+
+  .activity-card{
+    width:100% !important;
+    height:31vw !important;
+    min-height:210px !important;
+    max-height:none !important;
+    padding:4.2vw 2.4vw 2.4vw !important;
+    overflow:hidden !important;
+  }
+
+  .activity-card .icon{
+    width:clamp(58px,8vw,76px) !important;
+    height:clamp(58px,8vw,76px) !important;
+    margin-bottom:2vw !important;
+  }
+
+  .activity-card h3{
+    font-size:clamp(17px,2.8vw,24px) !important;
+  }
+
+  .activity-card p{
+    font-size:clamp(8px,1.35vw,11px) !important;
+    line-height:1.22 !important;
+  }
+
+  .activity-footer-tools{
+    position:static !important;
+    transform:none !important;
+    width:76% !important;
+    margin:1.5vw auto 0 !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:1vw !important;
+  }
+
+  .activity-footer-tools button{
+    min-height:38px !important;
+    font-size:9px !important;
+  }
+
+  .reset-progress-btn{
+    position:static !important;
+    display:block !important;
+    width:max-content !important;
+    margin:1vw auto 1.5vw !important;
+    min-height:34px !important;
+    font-size:9px !important;
+  }
+
+  /* MATERI: tetap 2 kolom */
+  .material-slide-layout,
+  .story-grid,
+  .material-grid{
+    width:92% !important;
+    height:auto !important;
+    min-height:38vw !important;
+    margin:1vw auto 0 !important;
+    grid-template-columns:1.04fr .96fr !important;
+    gap:1.4vw !important;
+    align-items:stretch !important;
+  }
+
+  .material-copy-card,
+  .material-visual-card,
+  .story-card,
+  .material-copy,
+  .material-side{
+    min-height:36vw !important;
+    height:auto !important;
+    overflow:visible !important;
+    padding:2.5vw !important;
+  }
+
+  .material-copy-card h3{
+    font-size:clamp(17px,2.6vw,23px) !important;
+  }
+
+  .material-copy-card p,
+  .material-bullet li{
+    font-size:clamp(9px,1.5vw,12px) !important;
+    line-height:1.4 !important;
+  }
+
+  .material-question-box,
+  .material-example-simple,
+  .material-link-student{
+    font-size:clamp(8px,1.35vw,11px) !important;
+  }
+
+  .material-image-frame{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #materi10 .material-slide-layout.material-slide-full{
+    width:88% !important;
+    height:auto !important;
+    min-height:38vw !important;
+    margin:1vw auto 0 !important;
+  }
+
+  #materi10 .material-copy-full{
+    height:auto !important;
+    min-height:38vw !important;
+    padding:4vw !important;
+  }
+
+  /* LATIHAN: kiri-kanan, tetapi screen boleh memanjang */
+  #practiceScreen .practice-wrap,
+  .practice-wrap{
+    width:90% !important;
+    height:auto !important;
+    min-height:40vw !important;
+    margin:1vw auto 0 !important;
+    grid-template-columns:.28fr .72fr !important;
+    gap:1.3vw !important;
+  }
+
+  #practiceScreen .practice-info,
+  #practiceScreen .practice-box,
+  .practice-info,
+  .practice-box{
+    height:auto !important;
+    min-height:40vw !important;
+    overflow:visible !important;
+  }
+
+  #practiceScreen .practice-box,
+  #practiceScreen .practice-box.match-mode{
+    padding:2.3vw !important;
+  }
+
+  #practiceScreen .practice-box:not(.match-mode) .options,
+  .options{
+    grid-template-columns:1fr 1fr !important;
+    gap:1vw !important;
+  }
+
+  .option-btn{
+    min-height:8vw !important;
+    padding:1.2vw !important;
+    font-size:clamp(9px,1.5vw,12px) !important;
+  }
+
+  #practiceScreen .practice-feedback,
+  #practiceScreen .practice-box.match-mode .practice-feedback{
+    max-height:none !important;
+    overflow:visible !important;
+    font-size:clamp(8px,1.35vw,11px) !important;
+  }
+
+  #practiceScreen .practice-next,
+  #practiceScreen .practice-box.match-mode .practice-next{
+    position:static !important;
+    transform:none !important;
+    min-height:40px !important;
+  }
+
+  #practiceScreen .matching-host{
+    overflow:visible !important;
+  }
+
+  #practiceScreen .matching-board{
+    min-height:210px !important;
+    height:31vw !important;
+  }
+
+  /* HASIL LATIHAN */
+  #practiceResult .result-panel-new{
+    width:90% !important;
+    height:auto !important;
+    min-height:45vw !important;
+    margin:4.5vw auto 2vw !important;
+    grid-template-columns:.36fr .64fr !important;
+    gap:1.5vw !important;
+    overflow:visible !important;
+  }
+
+  .result-review,
+  .review-content,
+  .review-card{
+    overflow:visible !important;
+  }
+
+  /* LAB MENU: 4 kartu tetap sejajar */
+  .lab-menu-grid{
+    width:94% !important;
+    height:auto !important;
+    margin:1.2vw auto 0 !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:1vw !important;
+  }
+
+  .lab-card{
+    height:31vw !important;
+    min-height:205px !important;
+    padding:2.2vw !important;
+  }
+
+  .lab-icon{
+    font-size:clamp(30px,5vw,46px) !important;
+  }
+
+  .lab-card h3{
+    font-size:clamp(13px,2vw,18px) !important;
+  }
+
+  .lab-card p{
+    font-size:clamp(8px,1.2vw,10px) !important;
+    line-height:1.3 !important;
+  }
+
+  .lab-card span{
+    font-size:clamp(7.5px,1.1vw,9px) !important;
+  }
+
+  .lab-menu-footer{
+    position:static !important;
+    transform:none !important;
+    width:76% !important;
+    margin:1.5vw auto 2vw !important;
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .lab-extra-btn{
+    min-height:46px !important;
+    grid-template-columns:34px 1fr !important;
+  }
+
+  .lab-extra-btn>span{
+    width:34px !important;
+    height:34px !important;
+    font-size:16px !important;
+  }
+
+  .lab-extra-btn b{
+    font-size:11px !important;
+  }
+
+  .lab-extra-btn small{
+    font-size:8px !important;
+  }
+
+  /* PENGANTAR & EKSPERIMEN LAB: tetap 2 kolom */
+  .lab-concept-grid,
+  .lab-intro-grid{
+    width:92% !important;
+    height:auto !important;
+    min-height:39vw !important;
+    margin:1vw auto 0 !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:1.3vw !important;
+  }
+
+  .lab-exp-layout,
+  .sim-grid{
+    width:92% !important;
+    height:auto !important;
+    min-height:39vw !important;
+    margin:1vw auto 0 !important;
+    grid-template-columns:1.06fr .94fr !important;
+    gap:1.3vw !important;
+  }
+
+  .lab-concept-card,
+  .lab-exp-card,
+  .lab-intro-card,
+  .control-card,
+  .visual-card{
+    height:auto !important;
+    min-height:37vw !important;
+    overflow:visible !important;
+    padding:2.2vw !important;
+  }
+
+  #introGrowth .lab-concept-grid{
+    height:auto !important;
+    min-height:39vw !important;
+  }
+
+  #introGrowth .lab-concept-card p{
+    font-size:clamp(8.5px,1.35vw,11px) !important;
+  }
+
+  #introGrowth .capacity-step{
+    font-size:clamp(7.5px,1.15vw,9.5px) !important;
+  }
+
+  .lab-slider-list,
+  .sliders{
+    overflow:visible !important;
+  }
+
+  .lab-slider-row,
+  .slider-row{
+    padding:0.9vw !important;
+  }
+
+  .lab-slider-top,
+  .slider-top{
+    font-size:clamp(8px,1.2vw,10px) !important;
+  }
+
+  .lab-answer-empty{
+    min-height:22vw !important;
+  }
+
+  #growthAnswer .lab-answer-lines{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  /* VISUAL LAB */
+  .lab-visual-shell{
+    height:auto !important;
+    min-height:56.25vw !important;
+    padding:2.5vw 4vw 2vw !important;
+    display:grid !important;
+    grid-template-rows:auto auto auto !important;
+    gap:1.3vw !important;
+  }
+
+  .observe-banner{
+    width:80% !important;
+    min-height:44px !important;
+  }
+
+  .lab-image-wrap{
+    width:66% !important;
+    max-width:620px !important;
+    max-height:none !important;
+    margin:0 auto !important;
+  }
+
+  .lab-visual-actions{
+    display:flex !important;
+    margin:0 auto !important;
+  }
+
+  /* REFLEKSI tetap 2 kolom */
+  .reflection-grid{
+    width:92% !important;
+    height:auto !important;
+    min-height:41vw !important;
+    margin:1vw auto 0 !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:1.2vw !important;
+  }
+
+  .reflection-card{
+    min-height:19vw !important;
+  }
+
+  /* POPUP: boleh scroll internal */
+  .modal,
+  .lab-explain-modal{
+    position:fixed !important;
+    inset:0 !important;
+    width:100vw !important;
+    height:100vh !important;
+    padding:1.5vw !important;
+    overflow:auto !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .modal-box,
+  .resource-modal-box,
+  .lab-explain-box{
+    width:88vw !important;
+    max-width:900px !important;
+    max-height:86vh !important;
+    overflow:auto !important;
+    padding:2.5vw !important;
+  }
+
+  .glossary-list{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .developer-team-compact{
+    grid-template-columns:1.2fr 1fr .8fr !important;
+  }
+
+  .developer-two-column{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .summary-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+
 </style>
 </head>
 <body>
-<div id="rotateWarning"><div><b>↻ Putar perangkat</b><p>Pada desktop media menggunakan tampilan 16:9. Pada perangkat seluler, media dapat digunakan dengan scroll agar setiap bagian tetap terbaca dengan rapi.</p></div></div>
+<div id="rotateWarning"><div><b>↻ Putar perangkat ke landscape</b><p>Media dirancang dengan komposisi 16:9. Gunakan posisi landscape agar seluruh teks, tombol, dan kartu terbaca dengan jelas. Setelah diputar, Anda hanya perlu scroll vertikal bila konten lebih tinggi dari layar.</p></div></div>
 
 <div id="app">
 
@@ -3512,60 +5264,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffcf33;outline-offse
     <div class="resource-heading developer-main-heading">
       <div class="kicker">PROFIL & TIM PENGEMBANG</div>
       <h2>👩‍🏫 Profil Pengembang Media</h2>
-      <p>Informasi pengembang, tim pendukung, serta keterangan singkat mengenai media pembelajaran.</p>
-    </div>
-
-    <!-- DUA PENGEMBANG: KIRI - KANAN -->
-    <div class="developer-two-column">
-
-      <!-- JODI -->
-      <div class="developer-person-card">
-        <div class="developer-small-photo">
-          <img id="developerPhotoJodi" alt="Foto Jodi Sadam Ibrahim">
-          <div class="developer-small-placeholder" id="developerPhotoJodiPlaceholder">
-            <div>📷</div>
-            <span>Foto Jodi</span>
-          </div>
-        </div>
-
-        <div class="developer-person-copy">
-          <div class="developer-number">PROFIL PENGEMBANG 1</div>
-          <h3>Jodi Sadam Ibrahim</h3>
-          <div class="developer-role">👩‍🏫 Pengembang Media &amp; Guru IPS</div>
-
-          <div class="developer-compact-data">
-            <p><b>Nama:</b> Jodi Sadam Ibrahim, S.Pd., Gr., MCE.</p>
-            <p><b>Instansi:</b> SMP Negeri 9 Kota Tangerang Selatan</p>
-            <p><b>Mata Pelajaran:</b> Ilmu Pengetahuan Sosial</p>
-            <p><b>Surel:</b> jodi.sadam35@guru.smp.belajar.id</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- RESTU -->
-      <div class="developer-person-card">
-        <div class="developer-small-photo">
-          <img id="developerPhotoRestu" alt="Foto Hariana Restu Fadillah Rahmah">
-          <div class="developer-small-placeholder" id="developerPhotoRestuPlaceholder">
-            <div>📷</div>
-            <span>Foto Restu</span>
-          </div>
-        </div>
-
-        <div class="developer-person-copy">
-          <div class="developer-number">PROFIL PENGEMBANG 2</div>
-          <h3>Hariana Restu Fadillah Rahmah</h3>
-          <div class="developer-role">👩‍🏫 Pengembang Media &amp; Guru IPS</div>
-
-          <div class="developer-compact-data">
-            <p><b>Nama:</b> Hariana Restu Fadillah Rahmah S.Pd., Gr.</p>
-            <p><b>Instansi:</b> SMP Barunawati 2 Jakarta</p>
-            <p><b>Mata Pelajaran:</b> Ilmu Pengetahuan Sosial</p>
-            <p><b>Surel:</b> hariana.restu4@guru.smp.belajar.id</p>
-          </div>
-        </div>
-      </div>
-
+      <p>Informasi tim pendukung, pengembang media, dan keterangan singkat mengenai media pembelajaran.</p>
     </div>
 
     <!-- TIM PENDUKUNG -->
@@ -3593,14 +5292,55 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffcf33;outline-offse
       </div>
     </div>
 
-    <!-- TENTANG MEDIA: SELALU DI DALAM POPUP -->
+    <!-- PENGEMBANG 1 & 2: DI BAWAH TIM, TEPAT SEBELUM TENTANG MEDIA -->
+    <div class="developer-two-column">
+      <div class="developer-person-card">
+        <div class="developer-small-photo">
+          <img id="developerPhotoJodi" alt="Foto Jodi Sadam Ibrahim">
+          <div class="developer-small-placeholder" id="developerPhotoJodiPlaceholder">
+            <div>📷</div><span>Foto Jodi</span>
+          </div>
+        </div>
+        <div class="developer-person-copy">
+          <div class="developer-number">PROFIL PENGEMBANG 1</div>
+          <h3>Jodi Sadam Ibrahim</h3>
+          <div class="developer-role">👩‍🏫 Pengembang Media &amp; Guru IPS</div>
+          <div class="developer-compact-data">
+            <p><b>Nama:</b> Jodi Sadam Ibrahim, S.Pd., Gr., MCE.</p>
+            <p><b>Instansi:</b> SMP Negeri 9 Kota Tangerang Selatan</p>
+            <p><b>Mata Pelajaran:</b> Ilmu Pengetahuan Sosial</p>
+            <p><b>Surel:</b> jodi.sadam35@guru.smp.belajar.id</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="developer-person-card">
+        <div class="developer-small-photo">
+          <img id="developerPhotoRestu" alt="Foto Hariana Restu Fadillah Rahmah">
+          <div class="developer-small-placeholder" id="developerPhotoRestuPlaceholder">
+            <div>📷</div><span>Foto Restu</span>
+          </div>
+        </div>
+        <div class="developer-person-copy">
+          <div class="developer-number">PROFIL PENGEMBANG 2</div>
+          <h3>Hariana Restu Fadillah Rahmah</h3>
+          <div class="developer-role">👩‍🏫 Pengembang Media &amp; Guru IPS</div>
+          <div class="developer-compact-data">
+            <p><b>Nama:</b> Hariana Restu Fadillah Rahmah S.Pd., Gr.</p>
+            <p><b>Instansi:</b> SMP Barunawati 2 Jakarta</p>
+            <p><b>Mata Pelajaran:</b> Ilmu Pengetahuan Sosial</p>
+            <p><b>Surel:</b> hariana.restu4@guru.smp.belajar.id</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="about-media developer-about-media">
       <h3>📘 Tentang Media</h3>
       <p><b>Lab Maya Dinamika Penduduk</b> adalah media pembelajaran interaktif Ilmu Pengetahuan Sosial untuk murid SMP Fase D/Kelas VIII. Media ini dirancang agar murid tidak hanya membaca rumus kependudukan, tetapi juga menghubungkan perubahan angka dengan gambaran kondisi nyata suatu wilayah.</p>
       <p>Alur pembelajaran terdiri atas informasi dan panduan, video pengantar, materi bercerita, latihan soal, eksperimen menggunakan slider, pengamatan visual hasil simulasi, penjelasan hasil, dan refleksi. Murid perlu memperoleh nilai latihan minimal 70 dan mengamati seluruh kemungkinan hasil simulasi pada setiap laboratorium sebelum melanjutkan ke laboratorium berikutnya.</p>
       <p>Progres belajar, jawaban latihan, input slider, hasil simulasi yang sudah diamati, dan refleksi tersimpan pada perangkat yang digunakan. Data tersebut tetap tersedia sampai pengguna memilih <b>Reset Progres</b>.</p>
     </div>
-
   </div>
 </div>
 
@@ -3936,8 +5676,84 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffcf33;outline-offse
         <span id="labStatusMigration">🔒 Selesaikan Lab 3</span>
       </button>
     </div>
+    <div class="lab-menu-footer">
+      <button
+  class="lab-extra-btn summary-btn locked"
+  id="labSummaryBtn"
+  onclick="tryOpenSummary()"
+  disabled
+>
+  <span>📚</span>
+  <div>
+    <b>Rangkuman Materi</b>
+    <small id="labSummaryStatus">
+      🔒 Selesaikan seluruh simulasi Lab Maya terlebih dahulu.
+    </small>
+  </div>
+</button>
+
+      <button class="lab-extra-btn reflection-btn locked" id="labReflectionBtn" onclick="tryOpenReflection()">
+        <span>✍️</span>
+        <div><b>Refleksi</b><small id="labReflectionStatus">🔒 Selesaikan seluruh Lab Maya terlebih dahulu.</small></div>
+      </button>
+    </div>
+
   </div>
 </section>
+
+
+<!-- RANGKUMAN SELURUH MATERI -->
+<div class="modal resource-modal" id="summaryModal">
+  <div class="modal-box resource-modal-box summary-modal-box">
+    <button class="modal-close" onclick="closeResourceModal('summaryModal')">✕</button>
+    <div class="resource-heading">
+      <div class="kicker">RANGKUMAN PEMBELAJARAN</div>
+      <h2>📚 Rangkuman Dinamika Penduduk</h2>
+      <p>Gunakan rangkuman ini untuk mengingat kembali inti materi sebelum atau setelah melakukan simulasi.</p>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>1. Dinamika Penduduk</h3>
+        <p>Dinamika penduduk adalah perubahan jumlah penduduk dari waktu ke waktu. Perubahan tersebut terutama dipengaruhi oleh <b>kelahiran</b>, <b>kematian</b>, dan <b>perpindahan penduduk</b>.</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>2. Pertambahan Penduduk</h3>
+        <div class="summary-formula">P = (L − M) + (I − E)</div>
+        <p>Kelahiran dan imigrasi menambah jumlah penduduk, sedangkan kematian dan emigrasi mengurangi jumlah penduduk.</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>3. Angka Kelahiran Kasar</h3>
+        <div class="summary-formula">(jumlah kelahiran ÷ penduduk pertengahan tahun) × 1.000</div>
+        <p>Rendah &lt;20‰, sedang 20–30‰, dan tinggi &gt;30‰. Hasil dibaca sebagai jumlah kelahiran untuk setiap 1.000 penduduk.</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>4. Angka Kematian Kasar</h3>
+        <div class="summary-formula">(jumlah kematian ÷ penduduk pertengahan tahun) × 1.000</div>
+        <p>Rentang pada materi: rendah 9–13‰, sedang 14–18‰, dan tinggi &gt;18‰. Hasil dibaca sebagai jumlah kematian untuk setiap 1.000 penduduk.</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>5. Imigrasi dan Emigrasi</h3>
+        <p><b>Imigrasi</b> adalah penduduk masuk dari negara lain untuk menetap. <b>Emigrasi</b> adalah penduduk keluar menuju negara lain untuk menetap.</p>
+        <div class="summary-formula">Angka migrasi = (jumlah migran ÷ penduduk pertengahan tahun) × 1.000</div>
+      </div>
+
+      <div class="summary-card">
+        <h3>6. Daya Dukung Wilayah</h3>
+        <p>Daya dukung wilayah adalah kemampuan wilayah memenuhi kebutuhan penduduk melalui sumber daya dan fasilitas yang tersedia, seperti lahan, air bersih, sekolah, kesehatan, jalan, sanitasi, dan transportasi.</p>
+      </div>
+
+      <div class="summary-card wide">
+        <h3>7. Hubungkan Angka dengan Kondisi Wilayah</h3>
+        <p>Angka kependudukan tidak hanya untuk dihitung. Murid perlu melihat dampaknya: wilayah dapat menjadi sepi ketika penduduk berkurang, tetap nyaman ketika pertumbuhan masih sesuai daya dukung, atau menghadapi tekanan terhadap lahan dan fasilitas ketika jumlah penduduk terlalu besar.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- INTRO LAB GROWTH -->
 <section class="screen sim-screen" id="introGrowth">
@@ -5199,6 +7015,55 @@ function tryOpenLabMenu(){
   showScreen("labMenu");
 }
 
+function allLabsComplete(){
+  return LAB_ORDER.every(type => isLabComplete(type));
+}
+
+function tryOpenSummary(){
+
+  if(!practicePassed){
+    alert(
+      "Rangkuman Materi belum dapat dibuka.\n\n" +
+      "Selesaikan latihan soal dan raih nilai minimal 70 terlebih dahulu."
+    );
+    return;
+  }
+
+  if(!allLabsComplete()){
+    const remaining = LAB_ORDER
+      .filter(type => !isLabComplete(type))
+      .map(type => LAB_CONFIG[type].label);
+
+    alert(
+      "Rangkuman Materi masih terkunci.\n\n" +
+      "Amati semua kemungkinan hasil A, B, dan C pada seluruh Lab Maya terlebih dahulu.\n\n" +
+      "Masih perlu diselesaikan:\n• " +
+      remaining.join("\n• ")
+    );
+
+    return;
+  }
+
+  openResourceModal("summaryModal");
+}
+
+function tryOpenReflection(){
+  if(!practicePassed){
+    alert("Refleksi belum dapat dibuka. Selesaikan latihan soal terlebih dahulu.");
+    return;
+  }
+
+  if(!isLabComplete("migration")){
+    alert(
+      "Refleksi belum terbuka.\n\n"+
+      "Amati seluruh kemungkinan hasil A, B, dan C pada keempat Lab Maya terlebih dahulu."
+    );
+    return;
+  }
+
+  showScreen("reflectionScreen");
+}
+
 function updateLabAccessUI(){
   const card=el("labActivityCard");
   const lockText=el("labMenuLockText");
@@ -5396,6 +7261,51 @@ function updateLabSequenceUI(){
         : "🔒 Belum terbuka";
     }
   });
+
+  const summaryBtn = el("labSummaryBtn");
+const summaryStatus = el("labSummaryStatus");
+
+if(summaryBtn && summaryStatus){
+
+  const summaryReady =
+    practicePassed &&
+    allLabsComplete();
+
+  summaryBtn.classList.toggle(
+    "locked",
+    !summaryReady
+  );
+
+  summaryBtn.disabled = !summaryReady;
+
+  if(summaryReady){
+
+    summaryStatus.textContent =
+      "✓ Seluruh simulasi selesai • Buka rangkuman materi.";
+
+  }else{
+
+    const completedLabs =
+      LAB_ORDER.filter(type =>
+        isLabComplete(type)
+      ).length;
+
+    summaryStatus.textContent =
+      `🔒 ${completedLabs}/4 Lab selesai • ` +
+      `Amati seluruh hasil A, B, dan C.`;
+  }
+}
+
+  const reflectionBtn=el("labReflectionBtn");
+  const reflectionStatus=el("labReflectionStatus");
+  if(reflectionBtn && reflectionStatus){
+    const ready=practicePassed && isLabComplete("migration");
+    reflectionBtn.classList.toggle("locked",!ready);
+    reflectionBtn.disabled=!ready;
+    reflectionStatus.textContent=ready
+      ? "✓ Seluruh Lab selesai • Tulis hasil refleksimu."
+      : "🔒 Selesaikan seluruh Lab Maya terlebih dahulu.";
+  }
 }
 
 function clearAnswer(boxId,runBtnId){
